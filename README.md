@@ -1,1 +1,3 @@
 # SingleSegmentGroups
+
+This repo was done to showcase a potential bug in [indice.Edi](https://github.com/indice-co/EDI.Net). When trying to implement a [PRODAT](https://ediel.org/wp-content/uploads/2025/03/PRODAT-v4r0A-20250314.pdf) message I found that when you have a `EdiSegmentGroup` that only inherits one segment and does not contain anything else and try to deserialize into such a structure it will not work properly. This repo contains one test to showcase this behaviour. 

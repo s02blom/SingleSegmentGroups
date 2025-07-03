@@ -50,7 +50,7 @@ public class PRODAT
 
     public IList<SegmentGroup4>? Parties { get; set; }
 
-    [EdiSegmentGroup("NAD", "CTA", /*"COM",*/ "RFF")]
+    [EdiSegmentGroup("NAD", "CTA", "RFF")]
     public record class SegmentGroup4 : NAD
     {
         public IList<SegmentGroup5>? Contacts { get; set; }
@@ -69,11 +69,9 @@ public class PRODAT
     {
     }
 
-    //[EdiSegmentGroup("RFF", "ERC")]
     [EdiSegmentGroup("RFF")]
     public record class SegmentGroup3 : RFF
     {
-        //public IList<ERC> ERC { get; set; }
     }
 
 }
