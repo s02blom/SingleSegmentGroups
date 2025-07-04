@@ -16,6 +16,7 @@ public class UnitTest1
             DateOfPreparation = new DateTime(2025, 01, 02, 03, 04, 00, DateTimeKind.Utc),
             Message = new()
             {
+                MessageRef = "1",
                 Dates =
                 [
                     new ()
@@ -68,6 +69,16 @@ public class UnitTest1
                         CountryIdentifier = "SE",
                     }
                 ],
+                Unt = new()
+                { 
+                    MessageRefNum = "1",
+                    SegmentCount = 10
+                }
+            }            
+        };
+        var actual = SerializerDeserializer(interchange);
+        actual.Should().BeEquivalentTo(interchange);
+    }
             }
         };
         var actual = SerializerDeserializer(interchange);

@@ -50,6 +50,8 @@ public class PRODAT
 
     public IList<SegmentGroup4>? Parties { get; set; }
 
+    public required UNT Unt { get; set; }
+
     [EdiSegmentGroup("NAD", "CTA", "RFF")]
     public record class SegmentGroup4 : NAD
     {
