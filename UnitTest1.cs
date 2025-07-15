@@ -79,11 +79,6 @@ public class UnitTest1
         var actual = SerializerDeserializer(interchange);
         actual.Should().BeEquivalentTo(interchange);
     }
-            }
-        };
-        var actual = SerializerDeserializer(interchange);
-        actual.Should().BeEquivalentTo(interchange);
-    }
 
     private Interchange SerializerDeserializer(Interchange interchange)
     {
